@@ -1,0 +1,1324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+<link rel="stylesheet" href="themes/Caride-Theme.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="jquery-mobile/jquery.mobile.structure-1.4.5.min.css" />
+<script src="jquery-mobile/jquery-1.11.1.min.js"></script>
+<script src="jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+
+<body>
+<div data-role="page" id="home">
+  <div data-role="header">
+    <h1>
+        <a href="#registro" data-role="button" data-icon="plus" data-iconpos="right">Agregar Productos</a>
+        <a href="#infoMe" data-role="button" data-icon="info" data-iconpos="right">Acerca de mi</a>
+    </h1>
+  </div>
+  <div data-role="content">
+    <!--////////////////////////////////////-->
+    <form class="ui-filterable">
+      <input id="filterBasic-input" data-type="search">
+    </form>
+    
+    <!--////////////////////////////////////-->
+    <p>¿Buscas algo en especial?</p>
+    <p align="center"><img src="images/rslogo.png"></p>
+    <div data-role="collapsible-set">
+      <div data-role="collapsible">
+        <h3>Armas</h3>
+          <ul data-role="listview" data-filter="true" data-input="#filterBasic-input">
+            <li><a href="#info-zgs">Zamorak Godsword</a><a href="#edit-zgs">Predet.</a></li>
+            <li><a href="#info-ns">Noxious Scythe</a><a href="#edit-ns">Predet.</a></li>
+            <li><a href="#info-aw">Abbysal Whip</a><a href="#edit-aw">Predet.</a></li>
+            <li><a href="#info-dfs">Dragonfire Shield</a><a href="#edit-dfs">Predet.</a></li>
+            <li><a href="#info-dc">Dragon Claws</a><a href="#edit-dc">Predet.</a></li>
+          </ul>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>Capas</h3>
+          <ul data-role="listview" data-filter="true" data-input="#filterBasic-input">
+            <li><a href="#info-cape">Cape (red)</a><a href="#edit-cape">Predet.</a></li>
+            <li><a href="#info-ree">Reefwalker's cape</a><a href="#edit-ree">Predet.</a></li>
+            <li><a href="#info-anc">Ancient cloak</a><a href="#edit-anc">Predet.</a></li>
+          </ul>
+      </div>
+      <div data-role="collapsible" data-collapsed="true">
+        <h3>Sets de armadura</h3>
+          <ul data-role="listview" data-filter="true" data-input="#filterBasic-input">
+            <li><a href="#info-dSet">Dragon plate armour set (lg)</a><a href="#edit-dSet">Predet.</a></li>
+            <li><a href="#info-tSet">Torva armour set</a><a href="#edit-tSet">Predet.</a></li>
+            <li><a href="#info-thirdSet">Third-age melee set</a><a href="#edit-thirdSet">Predet.</a></li>
+            <li><a href="#info-sSet">Saradomin armour set (lg)</a><a href="#edit-sSet">Predet.</a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+    <div data-role="navbar" data-type="horizontal">
+    <ul>
+        
+        <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+        <li><a href="#registro" data-role="button" data-icon="arrow-r">Siguiente</a></li>
+        
+     </ul>
+     </div>    
+  </div>
+</div><!-- final de div home -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="registro">
+  <div data-role="header">
+    <h1>Registro de Productos</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value=""  />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value=""  />
+
+      <label for="image">Imagen:</label>
+      <input type="text" name="image" id="image" value=""  />
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value=""  />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value=""  />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value=""  />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value=""  />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="date" name="date" id="date" value=""  />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Submit</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+    <div data-role="navbar" data-type="horizontal">
+    <ul>
+        <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+        <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+        <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+        <li><a href="#infoMe" data-role="button" data-icon="arrow-r">Siguiente</a></li>
+     </ul>
+     </div>    
+  </div>
+</div> <!-- final de div registro productos -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="info-zgs">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="068649834" disabled />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Zamorak Godsword" disabled />
+
+      <label for="image">Imagen:</label>
+      <p><img src="images/zgs.png" width="30%" height="30%"></p>
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Una terrorifica, pesada espada." disabled />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="1,434,126 coins" disabled />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="10" disabled />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="mandoble" disabled />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="16/02/2016" disabled />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="info-ns">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="867021009" disabled />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Noxious Scythe" disabled />
+
+      <label for="image">Imagen:</label>
+      <p><img src="images/nox.png" width="30%" height="30%"></p>
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Una guadaña letal, hecha de partes de araña." disabled />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="246,765,026 coins" disabled />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="2" disabled />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="mandoble" disabled />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016" disabled />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="info-aw">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="643925576" disabled />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Abbysal Whip" disabled />
+
+      <label for="image">Imagen:</label>
+      <p><img src="images/whip.png" width="30%" height="30%"></p>
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Una arma del abismo." disabled />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="79,966 coins" disabled />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="10" disabled />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="una mano" disabled />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016" disabled />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="info-dfs">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="006452198" disabled />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Dragonfire Shield" disabled />
+
+      <label for="image">Imagen:</label>
+      <p><img src="images/dfs.png" width="30%" height="30%"></p>
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Un pesado escudo, con un rostro de dragon gruñendo." disabled />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="1,198,532 coins" disabled />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="10" disabled />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="escudo" disabled />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016" disabled />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="info-dc">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="625733265" disabled />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Dragon Claws" disabled />
+
+      <label for="image">Imagen:</label>
+      <p><img src="images/dc.png" width="30%" height="30%"></p>
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Unas garras de lucha." disabled />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="212,532 coins" disabled />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="25" disabled />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="dos manos" disabled />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016" disabled />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="info-ree">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="123252165" disabled />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Reefwalker's cape" disabled />
+
+      <label for="image">Imagen:</label>
+      <p><img src="images/reefwalker.png" width="30%" height="30%"></p>
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Una capa hecha con materiales de el este." disabled />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="170,773 coins" disabled />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="10" disabled />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="capa" disabled />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016" disabled />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="info-anc">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="336986598" disabled />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Ancient cloak" disabled />
+
+      <label for="image">Imagen:</label>
+      <p><img src="images/ancient.png" width="30%" height="30%"></p>
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Una capa bendita." disabled />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="17,996 coins" disabled />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="2" disabled />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="capa" disabled />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016" disabled />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="info-cape">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="854320632" disabled />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Cape (red)" disabled />
+
+      <label for="image">Imagen:</label>
+      <p><img src="images/cape.png" width="30%" height="30%"></p>
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Una capa roja brillante." disabled />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="173 coins" disabled />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="100" disabled />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="capa" disabled />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016" disabled />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="info-dSet">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="846201305" disabled />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Dragon plate armour set (lg)" disabled />
+
+      <label for="image">Imagen:</label>
+      <p><img src="images/dplate.png" width="30%" height="30%"></p>
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Contiene un casco completo dragon, perchera y grebas." disabled />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="8,878,631 coins" disabled />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="10" disabled />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="set armadura" disabled />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016" disabled />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="info-tSet">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="128730652" disabled />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Torva armour set" disabled />
+
+      <label for="image">Imagen:</label>
+      <p><img src="images/torva.png" width="30%" height="30%"></p>
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Contiene un casco completo, perchera, grebas, guanteletes y botas." disabled />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="89,414,945 coins" disabled />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="5" disabled />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="set armadura" disabled />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016" disabled />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="info-thirdSet">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="001003125" disabled />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Third-age melee set" disabled />
+
+      <label for="image">Imagen:</label>
+      <p><img src="images/thirdSet.png" width="30%" height="30%"></p>
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Contiene un casco, perchera, grebas y escudo." disabled />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="1,062,261,469 coins" disabled />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="2" disabled />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="set armadura" disabled />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016" disabled />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="info-sSet">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="865425326" disabled />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Saradomin armour set (lg)" disabled />
+
+      <label for="image">Imagen:</label>
+      <p><img src="images/saradomin.png" width="30%" height="30%"></p>
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Contiene un casco completo, perchera, grebas y escudo." disabled />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="1,620,055 coins" disabled />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="20" disabled />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="set armadura" disabled />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016" disabled />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="edit-zgs">
+  <div data-role="header">
+    <h1>Edicion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="068649834" />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Zamorak Godsword" />
+
+      <label for="image">Imagen:</label>
+      <input type="text" name="image" id="image" value="" />
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Una terrorifica, pesada espada." />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="1,434,126 coins" />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="10" />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="mandoble" />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="date" name="date" id="date" value="16/02/2016" />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center">
+        <button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Guardar</button>
+        <button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Eliminar</button>
+        <a href="#home" data-role="button">Cancelar</a>
+      </div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div edit -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="edit-ns">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="867021009" />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Noxious Scythe" />
+
+      <label for="image">Imagen:</label>
+      <input type="text" name="image" id="image" value="" />
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Una guadaña letal, hecha de partes de araña." />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="246,765,026 coins" />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="2" />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="mandoble" />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016" />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="edit-aw">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="643925576"  />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Abbysal Whip"  />
+
+      <label for="image">Imagen:</label>
+      <input type="text" name="image" id="image" value="" disabled />
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Una arma del abismo."  />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="79,966 coins" />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="10" />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="una mano" />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016" />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="edit-dfs">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="006452198"  />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Dragonfire Shield"  />
+
+      <label for="image">Imagen:</label>
+      <input type="text" name="image" id="image" value=""  />
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Un pesado escudo, con un rostro de dragon gruñendo."  />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="1,198,532 coins"  />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="10"  />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="escudo"  />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016"  />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="edit-dc">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="625733265"  />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Dragon Claws"  />
+
+      <label for="image">Imagen:</label>
+      <input type="text" name="image" id="image" value="" disabled />
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Unas garras de lucha."  />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="212,532 coins"  />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="25"  />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="dos manos"  />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016"  />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="edit-ree">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="123252165"  />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Reefwalker's cape"  />
+
+      <label for="image">Imagen:</label>
+      <input type="text" name="image" id="image" value=""  />
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Una capa hecha con materiales de el este." />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="170,773 coins" />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="10"  />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="capa" />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016"  />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="edit-anc">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="336986598" />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Ancient cloak" />
+
+      <label for="image">Imagen:</label>
+      <input type="text" name="image" id="image" value="" />
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Una capa bendita." />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="17,996 coins" />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="2" />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="capa" />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016" />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="edit-cape">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="854320632"  />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Cape (red)"  />
+
+      <label for="image">Imagen:</label>
+      <input type="text" name="image" id="image" value=""  />
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Una capa roja brillante."  />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="173 coins"  />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="100"  />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="capa"  />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016"  />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="edit-dSet">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="846201305"  />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Dragon plate armour set (lg)"  />
+
+      <label for="image">Imagen:</label>
+      <input type="text" name="image" id="image" value=""  />
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Contiene un casco completo dragon, perchera y grebas."  />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="8,878,631 coins"  />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="10"  />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="set armadura"  />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016"  />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="edit-tSet">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="128730652"  />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Torva armour set"  />
+
+      <label for="image">Imagen:</label>
+      <input type="text" name="image" id="image" value=""  />
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Contiene un casco completo, perchera, grebas, guanteletes y botas." />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="89,414,945 coins"  />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="5"  />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="set armadura"  />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016" />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="edit-thirdSet">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="001003125"  />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Third-age melee set"  />
+
+      <label for="image">Imagen:</label>
+      <input type="text" name="image" id="image" value=""  />
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Contiene un casco, perchera, grebas y escudo."  />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="1,062,261,469 coins"  />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="2"  />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="set armadura"  />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016"  />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="edit-sSet">
+  <div data-role="header">
+    <h1>Informacion del Producto</h1>
+  </div>
+  <div data-role="content">
+    <div data-role="fieldcontain">
+
+      <label for="oid">Codigo del Producto:</label>
+      <input type="text" name="oid" id="oid" value="865425326"  />
+
+      <label for="name">Nombre del Producto:</label>
+      <input type="text" name="name" id="name" value="Saradomin armour set (lg)"  />
+
+      <label for="image">Imagen:</label>
+      <input type="text" name="image" id="image" value="" />
+
+      <label for="description">Descripcion:</label>
+      <input type="text" name="description" id="description" value="Contiene un casco completo, perchera, grebas y escudo."  />
+
+      <label for="price">Precio:</label>
+      <input type="text" name="price" id="price" value="1,620,055 coins" />
+
+      <label for="stock">Existencia:</label>
+      <input type="text" name="stock" id="stock" value="20"  />
+
+      <label for="category">Categoria:</label>
+      <input type="text" name="category" id="category" value="set armadura" />
+
+      <label for="date">Fecha de Registro:</label>
+      <input type="text" name="date" id="date" value="31/05/2016"  />
+
+      <label for="submit-1">Guardar:</label>
+      <div data-role="controlgroup" data-type="horizontal" align="center"><button type="submit" id="submit-1" class="ui-shadow ui-btn ui-corner-all">Comprar</button> <a href="#home" data-role="button">Cancelar</a></div>
+
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</div><!-- final de div info -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<div data-role="page" id="infoMe">
+  <div data-role="header">
+    <h1>Acerca de mí</h1>
+  </div>
+  <div data-role="content">
+    <p align="center"><img src="cine-foto.jpg" width="25%" height="25%"></p>
+    <p><b><font size="5">Datos personales:</font> </b></p>
+    <nbsp>
+    <p><b>Nombre:</b> Jose Antonio Caride Peña &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>A.K.A.</b> Epacs</p>
+    <p><b>Carrera:</b> Licenciatura en Ingenieria en Sistemas de Informacion.</p>
+    <p><b>Materia:</b>  Desarrollo Aplicaciones e-commerce.</p>
+    <p><b>Preferencias:</b> Preferencias de que D:?.</p>
+  </div>
+  <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+    <div data-role="navbar" data-type="horizontal">
+    <ul>
+        <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+        <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+        <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+        <li><a href="#info" data-role="button" data-icon="arrow-r">Siguiente</a></li>
+     </ul>
+     </div>    
+  </div>
+</div><!-- final de div infoMe -->
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<div data-role="page" id="info">
+      <div data-role="header">
+          <h1>Mas Informacion</h1>
+        </div>
+        <div data-role="content">
+          <p><b>Aplicación desarrollada mediante PhoneGap para Proyecto Final</b></p>
+          <p><b>Por Jose Antonio Caride Peña - Junio 2016</b></p>
+          
+        </div>
+        <div data-role="footer" data-position="fixed" data-id="footerPrinccipal">
+          <div data-role="navbar" data-type="horizontal">
+            <ul>
+              <li><a href="#" data-rel="back"data-role="button" data-icon="arrow-l">Atras</a></li>
+              <li><a href="#home" data-role="button" data-icon="home">Inicio</a></li> 
+              <li><a href="#info" data-role="button" data-icon="info" data-rel="dialog">Infor</a></li>
+              <li><a href="#home" data-role="button" data-icon="arrow-r">Siguiente</a></li>
+            </ul>
+        </div>    
+      </div>
+</div>
+</body>
+</html>
